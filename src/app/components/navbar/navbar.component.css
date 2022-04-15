@@ -1,0 +1,21 @@
+.nav-bar-main{
+    background-color: black !important;
+}
+
+.logo{
+    height: 8vh;
+    width: 6vw;
+    padding: 0.5vh;
+}
+
+.app-links{
+    float: right;
+}
+
+.nav-link-app{
+    color: white;
+    padding:2vh;
+    text-decoration: none;
+    font-size: larger;
+    text-align: center;
+}
