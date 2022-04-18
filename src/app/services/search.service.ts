@@ -63,7 +63,7 @@ export class SearchService {
           reject(error)
         }
       )
-      this.http.get<any>(`https://api.github.com/users/${queryUser}/repos`).toPromise().then(response=>{ 
+      this.http.get<any>(`https://api.github.com/users/${queryUser}/repos?${environment.apiKey}`).toPromise().then(response=>{ 
 	      for(var i=0; i<response.length; i++){
           this.newUserData = new Repos(response[i].name,
                                       response[i].description,
