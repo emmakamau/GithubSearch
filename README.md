@@ -44,7 +44,11 @@ BDD focuses on how the user will interact with the application.
 
 What you will see and experience:
 
-
+1. Landing page with an image and a form.
+2. Enter a username and click on **Search User**.
+3. A profile of the user including their avatar is displayed.
+4. Click on **View Repositories** and get directed to a list of the user's repositories.
+5. Click on the **Search New User** to display the form and search a new user.
 
 ## Known Bugs
 
