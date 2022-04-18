@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from '../classes/user';
+import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Repos } from '../classes/repos';
@@ -40,7 +41,7 @@ export class SearchService {
       email:string
     }
     let promise = new Promise<void>((resolve, reject)=>{
-      this.http.get<APiResponse>(`https://api.github.com/users/${queryUser}`).toPromise().then(response=>{
+      this.http.get<APiResponse>(`https://api.github.com/users/${queryUser}?${environment.apiKey}`).toPromise().then(response=>{
         this.user.id = response.id
         this.user.url = response.url
         this.user.login = response.login
