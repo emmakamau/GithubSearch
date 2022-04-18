@@ -10,6 +10,7 @@ import { SearchService } from 'src/app/services/search.service';
 export class UserComponent implements OnInit {
   public queryUser:string
   public githubUser:any
+  public repos = []
 
   constructor(private githubSearch:SearchService){}
 
@@ -20,6 +21,7 @@ export class UserComponent implements OnInit {
 
   ngOnInit(): void{
     this.githubUser = this.githubSearch.user
+    this.repos = this.githubSearch.repoData
   }
 
 }

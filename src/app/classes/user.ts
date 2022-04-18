@@ -12,6 +12,7 @@ export class User {
         public company:string,
         public bio:string,
         public public_gists:number,
-        public name: string
+        public name: string,
+        public email: string
     ){}
 }

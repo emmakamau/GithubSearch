@@ -2,19 +2,26 @@ import { Injectable } from '@angular/core';
 import { User } from '../classes/user';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Repos } from '../classes/repos';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SearchService {
   user:User
+  repository:Repos
+  newUserData :any = []
+  repoData = []
   
   constructor(private http:HttpClient){
-    this.user = new User("","","","",0,0,0,"",new Date,"","",0,"")
+    this.user = new User("","","","",0,0,0,"",new Date,"","",0,"","");
+    this.repository = new Repos("","","",new Date,new Date,"","",""); 	
   }
 
-
   displayUser(queryUser:string){
+    this.repoData.length = 0 //Sets array back to zero for new request
+
+    //Define properties expected from the API
     interface APiResponse{
       url:string, 
       login:string, 
@@ -28,7 +35,8 @@ export class SearchService {
       company:string,
       bio:string,
       public_gists:number,
-      name:string
+      name:string,
+      email:string
     }
     let promise = new Promise<void>((resolve, reject)=>{
       this.http.get<APiResponse>(`https://api.github.com/users/${queryUser}`).toPromise().then(response=>{
@@ -45,14 +53,25 @@ export class SearchService {
         this.user.bio = response.bio
         this.user.public_gists = response.public_gists
         this.user.name = response.name
+        this.user.email = response.email
         resolve()
       },
         error=>{
           reject(error)
         }
       )
+      this.http.get<any>(`https://api.github.com/users/${queryUser}/repos`).toPromise().then(response=>{ 
+	      for(var i=0; i<response.length; i++){
+          this.newUserData = new Repository(response[i].name,response[i].full_name,response[i].description,response[i].updated_at,response[i].html_url,response[i].clone_url,response[i].language,response[i].created_at);
+          this.repoData.push(this.newUserData);}
+        resolve()
+	    },
+	      error=>{
+	        reject(error)
+	      }
+	    )
     })
-
+    return promise
   }
 
 }
