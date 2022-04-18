@@ -17,7 +17,7 @@
     <div class="display-user">
         <div class="row">
             <div class="col-4">
-                <div class="card ">
+                <div class="card display-avatar">
                     <img class="card-img-top" [src]="githubUser.avatar_url" alt="user-avatar" class="user-avatar">
                     <div class="card-body">
                         <h4 class="card-title">{{githubUser.name}}</h4>
@@ -38,7 +38,10 @@
                             <li class="list-group-item">Username: {{githubUser.login}}</li>
                             <li class="list-group-item">Location: {{githubUser.location}} </li>
                             <li class="list-group-item">Company: {{githubUser.company}} </li>
-                            <li class="list-group-item">Account Link: {{githubUser.html_url}} </li>
+                            <li class="list-group-item">
+                                Account Link: 
+                                <a href="#" [href]="githubUser.html_url">{{githubUser.html_url}}</a>
+                            </li>
                             <li class="list-group-item">Created On: {{githubUser.created_at|date}} </li>
                             <li class="list-group-item">Email: {{githubUser.email}} </li>
                         </ul>
