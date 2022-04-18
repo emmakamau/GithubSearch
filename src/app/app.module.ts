@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { UserComponent } from './components/user/user.component';
 import { RepoComponent } from './components/repo/repo.component';
 import { BoldDirective } from './directive/bold.directive';
+import { CapitalizePipe } from './pipe/capitalize.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BoldDirective } from './directive/bold.directive';
     FooterComponent,
     UserComponent,
     RepoComponent,
-    BoldDirective
+    BoldDirective,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,

@@ -24,7 +24,7 @@
             <div class="card display-avatar">
                 <img class="card-img-top" [src]="githubUser.avatar_url" alt="user-avatar" class="user-avatar">
                 <div class="card-body">
-                    <h4 class="card-title">{{githubUser.name}}</h4>
+                    <h4 class="card-title">{{githubUser.name|capitalize}}</h4>
                     <p class="card-text">{{githubUser.bio}}</p>
                 </div>
             </div>
