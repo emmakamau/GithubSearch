@@ -1,5 +1,5 @@
 .search-form{
-    margin:auto;
+    margin:0 1rem;
     width: 50%;
 }
 
@@ -19,6 +19,10 @@
     margin: 0 2vw;
 }
 
+.btn-primary{
+    margin: 0;
+}
+
 /* Media Queries */
 
 /* Extra small devices (phones, 600px and down) */
@@ -26,6 +30,9 @@
     .search-form{
         margin: 1rem auto;
         width: 80%;
+    }
+    .btn-primary{
+        margin-top: 1vh;
     }
 }
 
@@ -45,9 +52,4 @@
     }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
 
