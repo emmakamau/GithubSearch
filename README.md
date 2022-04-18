@@ -1,27 +1,61 @@
 # GithubSearch
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
+A website where users may enter a GitHub username into a form, submit it, and see names and descriptions of that person's public repositories. A person can also look for repositories.
+[Click to view](https://emmakamau.github.io/GithubSearch/)
 
-## Development server
+## Contributor
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Emmaculate Kamau
 
-## Code scaffolding
+## Technologies used
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Javascript
+2. CSS
+3. HTML
+4. Bootstrap
+5. Typescript
+6. Angular Js
 
-## Build
+### Requirements
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+NodeJs and Angular installed or an IDE with the same functionality. VS Code is a great choice.
 
-## Running unit tests
+### Setup and instruction
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository [here](https://github.com/emmakamau/GithubSearch.git).
+2. Extract and open the folder.
+3. Run **ng serve --open** from the console.
+4. Navigate to `http://localhost:4200/` on your preferred browser.
 
-## Running end-to-end tests
+## Development
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+To fix a bug or enhance an existing module, follow these steps:
+- Fork the repo
+- Create a new branch (git checkout -b improve-feature)
+- Make the appropriate changes in the files
+- Add changes to reflect the changes made
+- Commit your changes (git commit -am 'Improve feature')
+- Push to the branch (git push origin improve-feature)
+- Create a Pull Request
 
-## Further help
+## Behaviour Driven Development
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+BDD focuses on how the user will interact with the application.
+
+What you will see and experience:
+
+
+
+## Known Bugs
+
+If you find a bug or would like to request a new function, reach out to me via Email: emmaculatewkamau@gmail.com or on [LinkedIn](https://www.linkedin.com/in/emmaculate-k-987353104/)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+Copyright (c) 2022 **Emmaculate Kamau**
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
