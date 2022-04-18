@@ -1,0 +1,65 @@
+.display-repos{
+    padding:0 6vw;
+}
+
+.repo-link{
+    text-decoration: none;
+    font-weight: bolder !important;
+    font-size: larger;
+    color: #03045E !important;
+}
+
+.list-display{
+    border: none;
+}
+
+.display-card{
+    border: none;
+}
+
+.alert-success{
+    background-color: #03045E;
+    color: #CAF0F8;
+    float: right;
+}
+
+.profile-detail{
+    padding:1vw !important;
+    background-color: #CAF0F8;
+}
+
+/* Media Queries */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .display-repos{
+        padding:1vh;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .display-repos{
+        padding:2vh;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .display-repos{
+        padding:4vh;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .display-repos{
+        padding:8vh;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .display-repos{
+        padding:8vh;
+    }
+}
