@@ -1,16 +1,50 @@
 <div class="container">
     <!-- Search form -->
     <div class="search-form">
-        <form action="" class="">
+        <form action="" class="" #searchForm="ngForm" (ngSubmit)="search(queryUser)">
             <div class="row">
                 <div class="col-8">
-                    <input type="text" class="form-control" placeholder="Enter user name">
+                    <input type="text" class="form-control" placeholder="Enter user name" [(ngModel)]="queryUser"
+                        name="search-user">
                 </div>
                 <div class="col-4">
-                    <input type="button" value="Search" class="btn btn-primary">
+                    <input type="submit" value="Search" class="btn btn-primary">
                 </div>
             </div>
         </form>
     </div>
     <!-- Users list -->
+    <div class="display-user">
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <img class="card-img-top" [src]="githubUser.avatar_url" alt="Card image cap">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">{{githubUser.name}}</h4>
+                    <p class="card-text">{{githubUser.bio}}</p>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-header text-white">
+                        <span class="badge badge-pill alert-success">{{githubUser.followers}} Followers</span>
+                        <span class="badge badge-pill alert-info">{{githubUser.public_repos}} Repos</span>
+                        <span class="badge badge-pill alert-primary">{{githubUser.following}} Following</span>
+                        <span class="badge badge-pill alert-warning">{{githubUser.public_gists}} Gists</span>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">Username: {{githubUser.login}}</li>
+                            <li class="list-group-item"></li>
+                            <li class="list-group-item"></li>
+                            <li class="list-group-item"></li>
+                            <li class="list-group-item"></li>
+                            <li class="list-group-item"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

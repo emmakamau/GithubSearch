@@ -14,18 +14,12 @@ export class UserComponent implements OnInit {
   constructor(private githubSearch:SearchService){}
 
   public search(queryUser){
-    this.githubSearch.search(queryUser:string)
-    this.githubSearch.displayUser().subscribe(results =>{
-      this.githubUser = results['data']
-    }, error{
-      alert('not found:(')')
-    })
+    this.githubSearch.displayUser(queryUser)
+    console.log(queryUser)
   }
 
   ngOnInit(): void{
-    this.githubSearch.displayUser().subscribe(response=>{
-      this.githubUser=response['data']
-    })
+    this.githubUser = this.githubSearch.user
   }
 
 }
