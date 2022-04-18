@@ -1,5 +1,5 @@
 .nav-bar-main{
-    background-color: black !important;
+    background-color: #03045E !important;
 }
 
 .logo{
@@ -19,3 +19,38 @@
     font-size: larger;
     text-align: center;
 }
+
+/* Media Queries */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .logo{
+        height: 3vh;
+        width: 4vw;
+        padding: 0.5vh;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .logo{
+        height: 6vh;
+        width: 4vw;
+        padding: 0.5vh;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .logo{
+        height: 4vh;
+        width: 4vw;
+        padding: 0.5vh;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

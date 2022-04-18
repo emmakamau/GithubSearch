@@ -1,12 +1,17 @@
-.display-repos{
+/* .display-repos{
     padding:0 6vw;
-}
+} */
 
 .repo-link{
     text-decoration: none;
     font-weight: bolder !important;
     font-size: larger;
     color: #03045E !important;
+}
+
+.repo-heading{
+    color: #03045E;
+    font-weight: bolder;
 }
 
 .list-display{
@@ -39,27 +44,27 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .display-repos{
-        padding:2vh;
+        padding:1vh 2vh;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .display-repos{
-        padding:4vh;
+        padding:1vh 4vh;
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .display-repos{
-        padding:8vh;
+        padding:1vh 8vh;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .display-repos{
-        padding:8vh;
+        padding:1vh 8vh;
     }
 }
