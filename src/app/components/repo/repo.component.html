@@ -1,1 +1,28 @@
-<p>repo works!</p>
+<div class="display-repos">
+    <h4>{{githubUser.name}}'s Repositories</h4>
+    <ul class="list-group">
+        <li *ngFor="let repo of repos" class="list-group-item">
+            <div class="card">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card-header">
+                            <a [href]="repo.html_url">{{repo.name}}
+                                <span class="badge badge-pill alert-success">{{repo.stargazers_count}} Star(s)</span>
+                            </a>
+                            <p>Created on: {{repo.created_at|date}}</p>
+                            <p>Last update: {{repo.updated_at|date}} </p>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body">
+                            <h5>Description:</h5>
+                            <p>{{repo.description}}</p>
+                            <p>Language: {{repo.language}}</p>
+                            <span>Clone at: <a [href]="repo.clone_url">{{repo.clone_url}}</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,5 +1,6 @@
 export class User {
     constructor(
+        public id:number,
         public url:string, 
         public login:string, 
         public html_url:string,  

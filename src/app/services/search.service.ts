@@ -14,7 +14,7 @@ export class SearchService {
   repoData = []
   
   constructor(private http:HttpClient){
-    this.user = new User("","","","",0,0,0,"",new Date,"","",0,"","");
+    this.user = new User(0,"","","","",0,0,0,"",new Date,"","",0,"","");
     this.repository = new Repos("","",new Date,new Date,"","","",0); 	
   }
 
@@ -23,6 +23,7 @@ export class SearchService {
 
     //Define properties expected from the API
     interface APiResponse{
+      id:number,
       url:string, 
       login:string, 
       html_url:string,  
@@ -40,6 +41,7 @@ export class SearchService {
     }
     let promise = new Promise<void>((resolve, reject)=>{
       this.http.get<APiResponse>(`https://api.github.com/users/${queryUser}`).toPromise().then(response=>{
+        this.user.id = response.id
         this.user.url = response.url
         this.user.login = response.login
         this.user.html_url = response.html_url

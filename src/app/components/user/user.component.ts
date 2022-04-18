@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/classes/user';
+import { Router} from '@angular/router';
 import { SearchService } from 'src/app/services/search.service';
 
 @Component({
@@ -12,7 +13,12 @@ export class UserComponent implements OnInit {
   public githubUser:any
   public repos = []
 
-  constructor(private githubSearch:SearchService){}
+  constructor(private githubSearch:SearchService, private router:Router){}
+
+  goToUrl(id){
+    this.router.navigate(['/repos',id])
+  }
+
 
   public search(queryUser){
     this.githubSearch.displayUser(queryUser)
