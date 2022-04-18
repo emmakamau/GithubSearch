@@ -43,7 +43,7 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .logo{
-        height: 4vh;
+        height: 6vh;
         width: 4vw;
         padding: 0.5vh;
     }
